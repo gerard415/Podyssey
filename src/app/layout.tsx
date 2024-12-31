@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ConvexClerkProvider from "./providers/ConvexClerkProvider";
 
 export const metadata: Metadata = {
   title: "Podyssey",
@@ -16,10 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <ConvexClerkProvider>
+      <html lang="en">
+        <body>
+            {children}
+        </body>
+      </html>
+    </ConvexClerkProvider>
+    
   );
 }
