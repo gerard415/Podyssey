@@ -102,12 +102,11 @@ const CreatePodcast = () => {
       console.log(error);
       console.log(audioUrl)
       toast({
-        title: 'Error nnn',
+        title: 'Please try again',
         variant: 'destructive',
       })
       setIsSubmitting(false);
     }
-    console.log(audioUrl)
   }
 
   return (
