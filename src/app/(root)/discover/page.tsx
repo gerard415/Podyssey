@@ -4,10 +4,20 @@ import EmptyState from '@/components/EmptyState'
 import LoaderSpinner from '@/components/LoaderSpinner'
 import PodcastCard from '@/components/PodcastCard'
 import { useQuery } from 'convex/react'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { api } from '../../../../convex/_generated/api'
 import Searchbar from '@/components/SearchBar'
 import { useSearchParams } from 'next/navigation'
+
+const Page = () => {
+  return(
+    <Suspense>
+      <Discover/>
+    </Suspense>
+  )
+}
+
+export default Page
 
 const Discover = () => {
   const searchParams = useSearchParams()
@@ -44,5 +54,3 @@ const Discover = () => {
     </div>
   )
 }
-
-export default Discover
