@@ -8,7 +8,6 @@ import Header from './Header';
 import Carousel from './Carousel';
 import { useQuery } from 'convex/react';
 import { useRouter } from 'next/navigation';
-import LoaderSpinner from './LoaderSpinner';
 import { cn } from '@/lib/utils';
 import { api } from '../../convex/_generated/api';
 import { useAudio } from '../../providers/AudioProvider';
